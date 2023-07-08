@@ -1,2 +1,10 @@
-<h1>{{title}}</h1>
-<router-outlet></router-outlet>
+<nav class="nav">
+    <div class="nav__menu">
+        <a [routerLink]="['/']">Weather App</a>
+    </div>
+</nav>
+
+<div class="container">
+    <app-search></app-search>
+    <app-weather></app-weather>
+</div>

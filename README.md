@@ -6,8 +6,8 @@ Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-
 
 ## Installation
 
-- `$ git clone https://github.com/bezael/angular-boilerplate.git`
-- `$ cd angular-boilerplate/`
+- `$ git clone https://github.com/bezael/WeatherApp.git`
+- `$ cd WeatherApp/`
 - `$ npm install`
 - `$ ng serve`
 
