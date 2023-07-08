@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { WeatherRoutingModule } from './weather-routing.module';
 import { WeatherComponent } from './weather.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
