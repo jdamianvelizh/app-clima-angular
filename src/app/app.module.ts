@@ -1,4 +1,4 @@
-import { provideHttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,7 +14,8 @@ import { WeatherModule } from './pages/weather/weather.module';
     BrowserModule, 
     AppRoutingModule,
     SearchModule,
-    WeatherModule
+    WeatherModule,
+    HttpClientModule
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],
