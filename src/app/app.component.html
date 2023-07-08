@@ -3,6 +3,6 @@
 </nav>
 
 <div class="container mx-auto">
-    <app-search></app-search>
+    <app-search (submited)="onSearch($event)"></app-search>
     <app-weather></app-weather>
 </div>
