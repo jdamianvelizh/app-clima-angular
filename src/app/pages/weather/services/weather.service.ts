@@ -26,8 +26,8 @@ export class WeatherService {
 
     public getWeatherByCoords(cord: Coord): Observable<WeatherData> {
         const params= new HttpParams()
-        .set('lat', cord.lat)
-        .set('lon', cord.lon)
+        .set('lat', cord.latitude)
+        .set('lon', cord.longitude)
 
         return this.http.get<WeatherData>(`${this.API_URL}/weather`,{params})
     }
