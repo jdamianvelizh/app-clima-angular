@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { WeatherRoutingModule } from './weather-routing.module';
 import { WeatherComponent } from './weather.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WeatherInterceptor } from './interceptors/weather.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,6 +15,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     WeatherRoutingModule
-  ],exports: [WeatherComponent]
+  ],exports: [WeatherComponent],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: WeatherInterceptor, multi: true},
+  ]
 })
 export class WeatherModule { }

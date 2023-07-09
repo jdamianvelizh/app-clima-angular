@@ -19,9 +19,7 @@ export class WeatherService {
     public getWeatherByName(city:string): Observable<WeatherData> {
         const params= new HttpParams()
         .set('q', city)
-        .set('units', 'metric')
-        .set('appid', environment.openWeather.key)
-
+        
         return this.http.get<WeatherData>(`${this.API_URL}/weather`,{params})
     }
 
@@ -30,8 +28,6 @@ export class WeatherService {
         const params= new HttpParams()
         .set('lat', cord.lat)
         .set('lon', cord.lon)
-        .set('units', 'metric')
-        .set('appid', environment.openWeather.key)
 
         return this.http.get<WeatherData>(`${this.API_URL}/weather`,{params})
     }
